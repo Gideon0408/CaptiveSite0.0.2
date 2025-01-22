@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Captive Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .login-button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        .login-button:hover {
+            background-color: #0056b3;
+        }
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-content">
+        <h1>Login</h1>
+        <button class="login-button" onclick="window.location.href='index_username_password.html'">Username & Password</button>
+        <button class="login-button" onclick="window.location.href='index_room_password.html'">Room Number & Password</button>
+        <button class="login-button" onclick="checkPassword()">Password Only</button>
+        <button class="login-button" onclick="window.location.href='register.html'">Register</button>
+    </div>
+    <script>
+        function checkPassword() {
+            var password = prompt("Enter Password:");
+            if (password === "1234") {
+                window.location.href = 'admin_dashboard.html';
+            } else {
+                window.location.href = 'index_password.html';
+            }
+        }
+    </script>
+</body>
+</html>
